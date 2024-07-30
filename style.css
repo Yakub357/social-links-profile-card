@@ -31,37 +31,71 @@ html {
 }
 
 body {
+  /* ? Styling */
   background-color: var(--color-grey-900);
+  line-height: 150%;
 
+  /* ? Layout */
   height: 100vh;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-100);
-
-  line-height: 150%;
 }
 
 main {
+  /* ? Layout */
   flex-grow: 1;
 
   display: grid;
   place-items: center;
+
+  padding: var(--spacing-300);
+}
+
+@media screen and (min-width: 40em) {
+  main {
+    width: 100%;
+    padding: 0 var(--spacing-400);
+  }
+}
+
+@media screen and (min-width: 64em) {
+  main {
+    padding: 0;
+    width: 100%;
+  }
 }
 
 .card {
-  max-width: 384px;
-  padding: var(--spacing-400);
+  /* ? Styling */
   border-radius: 12px;
   background-color: var(--color-grey-800);
   text-align: center;
+
+  /* ? Layout */
+  max-width: 327px;
+  padding: var(--spacing-300);
 
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-300);
+}
+
+@media screen and (min-width: 40em) {
+  .card {
+    width: 100%;
+    padding: var(--spacing-400);
+    max-width: 456px;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .card {
+    max-width: 384px;
+  }
 }
 
 .card__profile-picture {
@@ -88,6 +122,7 @@ main {
 }
 
 .user__info {
+  /* ? Layout */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -96,27 +131,28 @@ main {
 }
 
 .user__name {
+  /* ? Styling */
   color: var(--color-white);
-
   font-size: var(--text-preset-1);
   font-weight: 600;
 }
 
 .user__location {
+  /* ? Styling */
   color: var(--color-green);
-
   font-size: var(--text-preset-2);
   font-weight: 700;
 }
 
 .user__description {
+  /* ? Styling */
   color: var(--color-white);
-
   font-size: var(--text-preset-2);
   font-weight: 400;
 }
 
 .links {
+  /* ? Layout */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -124,14 +160,14 @@ main {
   gap: var(--spacing-200);
 
   .link {
+    /* ? Styling */
     list-style: none;
     width: 100%;
   }
 }
 
 .button {
-  display: block;
-
+  /* ? Layout */
   padding: var(--spacing-150);
   display: flex;
   justify-content: center;
@@ -139,19 +175,21 @@ main {
   align-self: stretch;
   gap: var(--spacing-100);
 
+  /* ? Styling */
   background-color: var(--color-grey-700);
   border-radius: 8px;
-
   color: var(--color-white);
   font-size: var(--text-preset-2);
   font-weight: 700;
   line-height: 150%;
   text-decoration: none;
 
+  /* ? Animation */
   transition: all ease-out 0.4s;
 }
 
 .button:hover {
+  /* ? Animation */
   background-color: var(--color-green);
   color: var(--color-grey-700);
 }
